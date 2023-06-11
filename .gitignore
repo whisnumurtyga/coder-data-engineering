@@ -1,0 +1,9 @@
+# Ignore video files
+*.mp4
+*.avi
+
+# Ignore PDF files
+*.pdf
+
+# Ignore folders with the same prefix
+Wishlist*/
