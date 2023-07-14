@@ -1,0 +1,33 @@
+Group,Position,Code,Name,Games Played,Wins,Draws,Losses,Goals_For,Goals_Against,Goal_Difference,Points
+Group A,1,NAP,Napoli,6,5,0,1,20,6,+14,15
+Group A,2,LIV,Liverpool,6,5,0,1,17,6,+11,15
+Group A,3,AJA,Ajax Amsterdam,6,2,0,4,11,16,-5,6
+Group A,4,RAN,Rangers,6,0,0,6,2,22,-20,0
+Group B,1,POR,FC Porto,6,4,0,2,12,7,+5,12
+Group B,2,BRU,Club Brugge,6,3,2,1,7,4,+3,11
+Group B,3,B04,Bayer Leverkusen,6,1,2,3,4,8,-4,5
+Group B,4,ATM,Atletico Madrid,6,1,2,3,5,9,-4,5
+Group C,1,MUN,Bayern Munich,6,6,0,0,18,2,+16,18
+Group C,2,INT,Internazionale,6,3,1,2,10,7,+3,10
+Group C,3,BAR,Barcelona,6,2,1,3,12,12,0,7
+Group C,4,PLZ,Viktoria Plzen,6,0,0,6,5,24,-19,0
+Group D,1,TOT,Tottenham Hotspur,6,3,2,1,8,6,+2,11
+Group D,2,SGE,Eintracht Frankfurt,6,3,1,2,7,8,-1,10
+Group D,3,SCP,Sporting CP,6,2,1,3,8,9,-1,7
+Group D,4,OLM,Marseille,6,2,0,4,8,8,0,6
+Group E,1,CHE,Chelsea,6,4,1,1,10,4,+6,13
+Group E,2,MIL,AC Milan,6,3,1,2,12,7,+5,10
+Group E,3,SLZ,FC Salzburg,6,1,3,2,5,9,-4,6
+Group E,4,DZG,Dinamo Zagreb,6,1,1,4,4,11,-7,4
+Group F,1,RMA,Real Madrid,6,4,1,1,15,6,+9,13
+Group F,2,RBL,RB Leipzig,6,4,0,2,13,9,+4,12
+Group F,3,SHK,Shakhtar Donetsk,6,1,3,2,8,10,-2,6
+Group F,4,CEL,Celtic,6,0,2,4,4,15,-11,2
+Group G,1,MNC,Manchester City,6,4,2,0,14,2,+12,14
+Group G,2,DOR,Borussia Dortmund,6,2,3,1,10,5,+5,9
+Group G,3,SEV,Sevilla,6,1,2,3,6,12,-6,5
+Group G,4,CPH,FC Copenhagen,6,0,3,3,1,12,-11,3
+Group H,1,BEN,Benfica,6,4,2,0,16,7,+9,14
+Group H,2,PSG,Paris Saint-Germain,6,4,2,0,16,7,+9,14
+Group H,3,JUV,Juventus,6,1,0,5,9,13,-4,3
+Group H,4,HAI,Maccabi Haifa,6,1,0,5,7,21,-14,3
