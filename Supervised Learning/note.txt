@@ -1,0 +1,91 @@
+4 komponen ai
+- Searching, Planning, Learning 
+- Learning belajar berdasar data lampau, belajar dengan data tersebut menggunakan pendekatan data numerik dan pendekatan secara analitik (model matematis dari awal sehingga menghasilkan persamaan matematika ) kalo numerik pendekatan secara patah patah, trial and error kalo pake model ini bagus gak nilainya, tujuannya untuk mendekati suatu nilai yang optimum
+- Machine learning menggunakn data lampau 
+- Machine Learning Paradigm
+	- dari awal data analitik (mencakup data science dan data analisis)
+	- akuisis data bisa crawling dan scraping (kalo menggunakan data sekunder) atau akuisisi secara manual kalo misalnya mau butuh sampel yang spesifik, 
+	- Garbage in Garbage Out (ketika data yang kita masukkan itu sampah maka yang keluar itu sampah) makanya process preprocessing itu makan waktu cukup lama ketimbang modellingnya
+	- karena model 1x running itu gabisa langsung bagus harus di optimize dlu, bisa pake hyper tuning parameter + random search sehingga nanti hasilnya menjadi parameter optimum yang hadsilnya dipake,
+	- terus modelnya kita save terus kita deploy di website, jadi di website tinggal input parameter yang sama bisa digunakan machine learning
+	
+	
+- Machine Learning Jenis
+	1. Supervised Learning
+		- klasifikasi => y nya kategorikal
+		- regresi => y continu
+	2. Unsupervised Learning
+		- karena gak diarahkan nanti hasilnya itu secara random, mesinnya mengelompokan
+		- Dimensional Reduction => mereduksi dimensi dari data misal data dari big data kan kolomnya banyak sekali, visualisasi kita terbatas sampe 3d biar mudah analisisnya bisa menggunakan dimensionality reduction
+	3. Reinforcement Learning 
+		- trial dan error, Contoh Algoritma, monte carlo, hideden markov model
+
+A. Supervised Learning
+	1. pengertian
+		- data have target attribute, 
+		- data dilabebeli dulu
+		- data yang melabeli itu berdasarkan judgement orang yang punya keilmuan, gak boleh asal menentukan kelasnya 
+		- target itu mengajarkan datanya masuk ke kelas mana 
+		- proses learning menggunakan model menggunakan data training testingnya menggunakan data testingnya
+		- model itu harus diuji supaya bagus digunakan prediksi
+		- kalo data gak di split gak di testing bisa ambigu nantinya 
+		- analogi pake kotak atau segitiga
+	2. Pembagian Supervised Learning
+		- Klasifikasi : membagi data, jadi nanti modelnya itu mencari garis bagi nya
+			- Hypoer plan di SVM, kalo random forest itu entropi/ gain
+		- Regressi : mencari garis yang mendekati sifat datanya sehingga dicari garis yang mendekati karakteristik data tersebut 
+			- kalo polinomial mendekati bentuk datanya, jadi nanti bisa diprediksi kira kira jatuhnya dimana
+	3. Handson
+		1. PubCham
+			a. Baca Data
+			b. Pake Iloc untuk baca data yang udah numerik
+			c. Data Preprocessing
+			
+		2. Kerotaroth
+		
+	4. Step By Step Hands On
+		1. Preprocessing Data (istilah garbage in garbage out)
+		2. Pisahkan data X dan Data Y (data y itu target)
+		3. Terus Bagi tadi jadi data train dan data test
+		4. Terus Aplikasikan Model
+			- sebelum diaplikasikan modelnya kita definisikan parameternya dulu 
+			
+			note: sebenarnya harus mempelajari algoritmanya dlu kalo mau memahami lebih dalem, seperti n estimator itu apa max depth itu apa , jadi punya reasoning kalo mau pake parameter tersebut
+		5. Terus ukur kinerja model tersebut menggunakan metrics
+			contoh yang umum matrik akurasi, matriks recall, matriks roc_curve
+	5. Cara Kerja Model 
+		XG Boost => membangkitkan pohon sebanyak n_estimator (100)
+		Nah kalo paham mengenai algoritmanya kalian bisa otak atik 
+	6. Hyper Tuning Parameter terbaik
+		- Grid Search (menentukan range parameternya manual, misalnya parameter a 50 ke 600 dengan interval 50) terus setiap gridnya akan mengacak antara parameter a nilai sekian sama param b nilainya sekian 
+		- Randomized Search 
+		- Bayesian Model
+		- Makanya sebelum diajarkan model itu kita mempelajari matrik, vector, probabilitas dan statistika biar modelling itu lebih dalam analisisnya daripada membicarakan akurasi saja
+	
+		
+	5. Pertanyaan
+		1. dikasus data pak Oby svc lebih jelek ketimbang MLP namun di saya menggunakan data Iris itu dapat akurasinya lebih bagus menggunakan SVC, kemungkinan apa saja pak yang mempengaruhi hal tersebut,
+			- SVM unggul di high dimensional robust kuat di dimensi tinggi, cuman pak obi dapat kecil belum ubah parameter
+			- MLP modelnya memilah inputan se spesifik mungkin sehingga karakteristiknya bisa terdeministik di hidden layer jadi untuk high dimensional itu juga cocok
+			- Jadi semua tergantung balik ke karakteristik datasetnya  contoh data biner 0-1 atau data int atau bahkan data float 
+			- kelemahan SVM itu tidak bisa divisualkan
+			- Case pak obi kurang cocok soalnya bentuknya 0 1 jadi kurang cocok buat SVM range datanya kecil
+		2. Matrik akurasi kelemahannya kalo data kelasnya tidak seimbang, nah itu pake apa ya pak?
+			- Kebanyakan di dunia nyata itu tidak seimbang (balanced search model) salah satu ngebalancing data yang kelasnya gak seimbang bisa menggunakan random over sambilng atau random under sampling, balancekan dlu jangan langsung dimodelkan menggunakan random over sampling
+				- jadi data yang udah siap tadi class minor nya itu di duplikat dlu 
+				- terus matrik ujinya pake balanced akurasi
+		3. XG Boost vs Pohon Forest
+			- Ensemble itu model peningkatan untuk sebanyak n, membangkitkan 1 pohon diawal terus pohon selanjutnya itu boosting dari pohon awal
+			- Membangkitkan pohon keputusan untuk klasifikasi , voting mana yang menghasilkan paling banyak maka dia akan memilih kelas mana yg paling banyak
+			- Antar pohon gak ada hubungannya (random forest) kalo xg boost itu saling berkaitan (antara pohonnya, misal pohon awal digunakan untuk pohon selanjutnya)
+		4. Model Machine Learning memiliki keunggulan masing masing, 
+			Pertanyaan, apakah pak Oby punya saran bagaimana cara kita memilih model yang cocok untuk dataset kita, contohnya linear regresi bergantung atas keterhubungan data, berarti data yang kita pake harus memiliki karakteristik yang korelasinya tinggi, jadi bagaimana menentukan model yang cocok untuk data kita
+				- Perhatikan Datanya, data itu dua kriteria (Linear dan Non Linear), Bisa dipisahkan dan tidak bisa dipisahkan, ketika datanya di visualkan datanya membentuk suatu linear
+					- harus memenuhi beberapa syarat :
+						1. Autoregressive (tidak boleh ketergantungan dengan waktu)
+						2. Datanya Linear
+						3. Kalo datanya ketergantungan sama time series harus pake model autoregressive (ARIMA, ARMAX)
+					- kalo logreg itu lebih ke data diskrit tidak continous
+					- SVM itu mewajibkan data numerik, kalo gk numerik gabisa, kalo ensemble method itu cocok untuk keduanya 
+				- Sering sering baca literatur terkait objek yang kita teliti, komputasi hal tersebut menggunakan metode seperti apa, bandingkan juga dengan metode lain untuk validasi
+				- Kita harus tahu data dan cara model tersebut bekerja, bagaimana data yang diinginkan itu bagaimana
