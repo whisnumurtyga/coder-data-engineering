@@ -44,3 +44,64 @@ Hyperparameter yg kemarin dipakai :
 5. Eksplorasi_probabilitas
 
 Epsilon greedy ==> selain bisa eksploitasi, reinforcement harus bisa eksplorasi
+
+
+BY Whisnu
+
+
+- Policy => hubungannya action dengan agent
+- Value Function =>
+	- bisa dihitung per perubahan state atau total value functionnya 
+	
+	
+- kalo kamu memilih action kamu harus pertimbangkan dua hal
+	- mau eksplor (cari kemungkinan lain yang memiliki reward lebih besar)
+	- atau mau eksploit
+	eksplor untuk belajar, eksploit untuk mendapatkan reward
+	- risiko eksplor lebih tinggi
+	- 
+	
+- kalo blm tahu kondisi environtment lebih baik eksplor 
+
+jadi ada proses selection action antara exploration vs exploration
+
+
+- contoh kapan kita menggunakan eksplor atau eksploit
+
+- dalam artian seimbang bukan 50% 50% bukan berarti dari 500 iterasi 250 explor 250 explor
+	balik ke reward dan action dan case yang kita lakukan apa
+	
+
+- MDP
+	- Semua model RL biasanya dimodelkan oleh Markov Decision Process
+		1. Environtment menginisiasi State ke Agent
+		2. Agent Mengenali Environtment,  
+		3. Agent Melakukan Action
+		
+	- Kalo jalannya bersih bisa belok kanan belok kiri belok
+	
+
+- RL Approach
+	- Value Based
+		- value based paling basic
+		- belajar dan mengevaluasi
+		- mengerti perbedaan setiap state dan action pasangannya akan menghasiklkan apa (state action pair)
+		- 
+		A. Q Learning
+			- Tikus cari keju tapi ada perangkap tikus, kucing, goa
+			- Selain reward ada beberapa penghalang/ obstacles yang menghalangi dia dalam mendapatkan reward
+			- Goalnya bukan hanya dapat keju
+	- Policy Based
+	- Model Based
+	
+	dinilainya berdasarkan value, aturan? sama model
+	
+	
+jangan oprek matematika rumus RL nya, tugas kita mengaplikasikan rl di industri saat ini
+
+Agent nya 1, environtmentnya banyak dan goalnya banya, goalnya ini 
+
+	hero dihadapkan oleh environtment tower goal nya harus hancurin tower, mungkin dia akan menemukan environtmen lain misalkan dia bunuh creep, dan creep sendiri bisa jadi environtment tapi bisa juga creep ini sebagai obstacle, nah kalo kasus kita tadi kita ketemu obstacle kita pindah episode,tapi kita bisa tentukan policy baru ketika ketemu obstacle, 
+	
+	jadi agent ditanamkan policy sama environtment feedback
+	semua akan timpang tindih, jadi akan di itung prioritynya
