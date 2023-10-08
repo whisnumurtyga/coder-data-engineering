@@ -1,0 +1,46 @@
+Summarize By Dara
+
+Machine learning adalah kemampuan suatu mesin untuk mengetahui pola-pola dalam data dan membuat keputusan tanpa perlu pemrograman langsung.
+
+Machine learning dibagi 3, yaitu
+Unsupervised learning, supervised learning, reinforcement learning.
+
+Reinforcement learning adalah sebuah paradigma atau presepsi machine learning yang melibatkan agent dan environment.
+
+Algoritma reinforcement  learning :
+1. Q-learning
+2. Q-Deep Learning
+3. Policy Gadient Method
+4. Actor Critic
+5. Proximal Policy Optimization
+6. Monte Carlo Method
+
+Key concept :
+1. Agen : org yg melakukan sesuatu melibatkan reinforcement (subyek)
+2. Environment : suatu yang dikenai subyek (objek). Environtment akan memberi feedback pada agen berupa reward atau penalti.
+3. Actions : yang dilakukan oleh agen yg dikenai environment.
+4. State : representasi dari kondisi environment pada suatu waktu tertentu. Agen memutuskan tindakan berdasarkan state saat ini.
+5. Policy : stategi yang digunakan agen untuk memilih tindakan pada state saat ini.
+6. Eksplorasi : tindakan mencoba tindakan baru untuk memahami lingkungan dengan lebih baik.
+7. Eksploitasi : tindakan memilih tindakan terbaik berdasarkan pengetahuan saat ini. 
+Eksplorasi dan eksploitasi harus seimbang, maksudnya tergantung reward yang kalian dapat dan aksi yang diberikan.
+
+Pendekatan reinforcement learning :
+1. Value based
+2. Policy based
+3. Model based
+
+Value based : tujuan belajar dan mengevaluasi setiap state dan pasangan aksi ini harus melakukan apa. Nama algoritma paling terkenal adalah Q-learning.
+
+Sifat reinforcement : bakal greedy jika ada reward besar, maka dia akan ekploitasi.
+
+Reinforcement Learning ==> dia akan mencoba beberapa kali percobaan untuk belajar mendapatkan hasil baik, jadi butuh banyak parameter, itu disebut hyperparameter.
+
+Hyperparameter yg kemarin dipakai :
+1. Total_episode
+2. Max_steps
+3. Learning_rate : seberapa besar langkah yg diambil oleh model untuk optimal
+4. Discount_factor : memberi bobot pada hasil yg diharapkan
+5. Eksplorasi_probabilitas
+
+Epsilon greedy ==> selain bisa eksploitasi, reinforcement harus bisa eksplorasi
